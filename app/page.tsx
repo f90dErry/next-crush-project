@@ -1,3 +1,5 @@
+import ExploreBtn from '@/components/ExploreBtn'
+
 const Page = () => {
   return (
     <section>
@@ -5,8 +7,19 @@ const Page = () => {
         The Hub For Every Dev <br /> Event You Can't Miss!{' '}
       </h1>
       <p className='text-center mt-5'>
-        Hacatons, Meetups and Conferences All In One Place
+        Hackathons, Meetups and Conferences All In One Place
       </p>
+      <ExploreBtn />
+
+      <div className='mt-20 space-y-7'>
+        <h3>Featured Events</h3>
+
+        <ol className='events'>
+          {[1, 2, 3, 4, 5].map((event) => (
+            <li key={event}>Event {event}</li>
+          ))}
+        </ol>
+      </div>
     </section>
   )
 }
